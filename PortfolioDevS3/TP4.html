@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio TP4 - BUT MMI</title>
+    <link rel="stylesheet" href="CSS/TP4.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="active">Accueil</a>
+            <a href="TP1.html">TP1</a>
+            <a href="TP2.html">TP2</a>
+            <a href="TP3.html">TP3</a>
+            <a href="TP4.html">TP4</a>
+            <a href="TP5.html">TP5</a>
+            <a href="TP6.html">TP6</a>
+            <a href="TP7.html">TP7</a>
+            <a href="TP8.html">TP8</a>
+        </div>
+    </nav>
+<main class="portfolio-wrapper">
+    <header class="main-header">
+        <h1>TP4</h1>
+        <p class="subtitle">Développement Front-End</p>
+    </header>
+
+    <section class="tp-container">
+        <article class="analysis-card">
+            <h2>Analyse de l'Exercice 1 : Interactivité via :target</h2>
+            <div class="analysis-content">
+                <p><strong>Connaissances mises en jeu :</strong> Cet exercice repose sur l'utilisation de la pseudo-classe <code>:target</code> pour déclencher l'affichage d'éléments en fonction de l'ancre URL. Il mobilise également des notions de positionnement fixe pour le menu, de gestion du flux (<code>display: none</code> / <code>block</code>) et d'animations CSS avec <code>@keyframes</code> pour l'apparition des blocs.</p>
+                <p><strong>Difficulté :</strong> <span class="badge medium">Moyen</span>. La principale difficulté était dans le masquage initial des paragraphes et la coordination entre les liens et les IDs ciblés.</p>
+                <p><strong>Intérêt pédagogique :</strong> Important pour comprendre comment créer des interfaces dynamiques (comme des onglets ou des modales) sans avoir recours au JavaScript, allégeant ainsi le poids de la page.</p>
+                <p><strong>Qualité du résultat :</strong> Le code est efficace et bien structuré. L'aspect fonctionnel est impeccable et les couleurs facilitent la distinction entre les sections.</p>
+            </div>
+        </article>
+
+        <div id="tp4-ex1-render" class="exercise-white-box">
+            <ul class="nav-links">
+                <li><a href="#paragraphe1">Paragraphe 1</a></li>
+                <li><a href="#paragraphe2">Paragraphe 2</a></li>
+                <li><a href="#paragraphe3">Paragraphe 3</a></li>
+            </ul>
+
+            <div id="paragraphe1" class="content-div">
+                <h2>Paragraphe 1</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac felis enim. Aenean varius augue nec leo viverra non eleifend neque interdum. Curabitur pretium dictum tortor, eget malesuada purus convallis sed. Morbi eget accumsan sapien. Phasellus ornare lacinia magna, et placerat justo dapibus at. Donec eleifend porttitor augue ut egestas. Vivamus porta aliquet lectus, vel fermentum diam consequat vel. Etiam pulvinar dignissim orci, non dapibus lectus fringilla a. Donec ligula dolor, fringilla nec porttitor nec, ultricies a purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus et massa at massa euismod faucibus non at risus. Curabitur sed nunc justo. Sed sed justo lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque a bibendum diam. Morbi in juste est. Aenean elit turpis, molestie ut facilisis sed, congue non dui.
+                    <br /><br />
+                    Morbi vel enim nisi, convallis pharetra ligula. Nunc mauris dui, pharetra non tempus ac, tincidunt quis est. Fusce nec metus vitae nulla fringilla convallis. Fusce vitae nulla ligula. Quisque convallis turpis orci, a adipiscing sem. Duis odio elit, vehicula et porttitor at, gravida non ante. Aliquam eu dignissim velit. Curabitur neque leo, pharetra vel rutrum id, convallis a ligula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque magna dui, condimentum non placerat ut, commodo nec nunc. Nullam et elit felis. Nullam vel nulla non turpis iaculis tincidunt dapibus sit amet turpis. Proin id lectus iaculis turpis vestibulum pharetra ut et velit. Pellentesque metus dolor, cursus non commodo at, tempus et libero. Quisque nisi enim, ultrices ultricies cursus in, volutpat sed orci. Quisque vel tempor libero.
+                    <br /><br />
+                    Maecenas commodo elit non neque lobortis congue ornare ac libero. Phasellus a imperdiet lorem. Donec posuere hendrerit fringilla. In lacus urna, vehicula ut bibendum eu, dictum in turpis. Maecenas viverra consectetur est nec cursus. Aliquam eu gravida urna. Curabitur a leo ut metus viverra auctor vitae id turpis. Quisque erat quam, egestas sed euismod et, tristique vitae sem. Etiam varius dui at est aliquam pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus eget leo magna, molestie vestibulum nulla. Etiam rutrum accumsan dignissim. Sed dictum convallis orci in lacinia.
+                </p>
+            </div>
+
+            <div id="paragraphe2" class="content-div">
+                <h2>Paragraphe 2</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac felis enim. Aenean varius augue nec leo viverra non eleifend neque interdum. Curabitur pretium dictum tortor, eget malesuada purus convallis sed. Morbi eget accumsan sapien. Phasellus ornare lacinia magna, et placerat justo dapibus at. Donec eleifend porttitor augue ut egestas. Vivamus porta aliquet lectus, vel fermentum diam consequat vel. Etiam pulvinar dignissim orci, non dapibus lectus fringilla a. Donec ligula dolor, fringilla nec porttitor nec, ultricies a purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus et massa at massa euismod faucibus non at risus. Curabitur sed nunc justo. Sed sed justo lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque a bibendum diam. Morbi in juste est. Aenean elit turpis, molestie ut facilisis sed, congue non dui.
+                    <br /><br />
+                    In hac habitasse platea dictumst. Sed et lunctus mi. Maecenas non purus leo, vitae gravida purus. Duis feugiat nisi accumsan dolor vestibulum interdum quis a enim. Fusce luctus, ligula et aliquam viverra, leo risus hendrerit risus, vitae suscipit quam augue sed erat. Aliquam massa dolor, ultrices vel scelerisque at, accumsan at lectus. Vestibulum ac ornare libero. Integer metus elit, sodales in blandit at, laoreet vitae dui. Phasellus bibendum luctus arcu, eget laoreet risus facilisis id. Cras vehicula, magna quis volutpat aliquet, est risus commodo nunc, eu egestas neque libero a dui. Nam dolor nunc, condimentum nec sollicitudin ac, lacinia nec nunc. Nam a nunc ac augue lobortis molestie. Ut et elit at tellus imperdiet porta. Vivamus ut velit eget mi lacinia faucibus sit amet non elit. Duis posuere dui eu sem commodo consequat. Praesent condimentum scelerisque sapien, nec fermentum dui eleifend vel. Cras pretium suscipit volutpat. Etiam tempus, libero interdum condimentum condimentum, nunc leo consectetur diam, vel rutrum erat orci vel nisl. Aenean condimentum condimentum tellus, vitae adipiscing metus tristique ac. Nulla facilisi.
+                    <br /><br />
+                    Morbi vel enim nisi, convallis pharetra ligula. Nunc mauris dui, pharetra non tempus ac, tincidunt quis est. Fusce nec metus vitae nulla fringilla convallis. Fusce vitae nulla ligula. Quisque convallis turpis orci, a adipiscing sem. Duis odio elit, vehicula et porttitor at, gravida non ante. Aliquam eu dignissim velit. Curabitur neque leo, pharetra vel rutrum id, convallis a ligula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque magna dui, condimentum non placerat ut, commodo nec nunc. Nullam et elit felis. Nullam vel nulla non turpis iaculis tincidunt dapibus sit amet turpis. Proin id lectus iaculis turpis vestibulum pharetra ut et velit. Pellentesque metus dolor, cursus non commodo at, tempus et libero. Quisque nisi enim, ultrices ultricies cursus in, volutpat sed orci. Quisque vel tempor libero.
+                </p>
+            </div>
+
+            <div id="paragraphe3" class="content-div">
+                <h2>Paragraphe 3</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac felis enim. Aenean varius augue nec leo viverra non eleifend neque interdum. Curabitur pretium dictum tortor, eget malesuada purus convallis sed. Morbi eget accumsan sapien. Phasellus ornare lacinia magna, et placerat justo dapibus at. Donec eleifend porttitor augue ut egestas. Vivamus porta aliquet lectus, vel fermentum diam consequat vel. Etiam pulvinar dignissim orci, non dapibus lectus fringilla a. Donec ligula dolor, fringilla nec porttitor nec, ultricies a purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus et massa at massa euismod faucibus non at risus. Curabitur sed nunc justo. Sed sed juste lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque a bibendum diam. Morbi in juste est. Aenean elit turpis, molestie ut facilisis sed, congue non dui.
+                    <br /><br />
+                    In hac habitasse platea dictumst. Sed et lunctus mi. Maecenas non purus leo, vitae gravida purus. Duis feugiat nisi accumsan dolor vestibulum interdum quis a enim. Fusce luctus, ligula et aliquam viverra, leo risus hendrerit risus, vitae suscipit quam augue sed erat. Aliquam massa dolor, ultrices vel scelerisque at, accumsan at lectus. Vestibulum ac ornare libero. Integer metus elit, sodales in blandit at, laoreet vitae dui. Phasellus bibendum luctus arcu, eget laoreet risus facilisis id. Cras vehicula, magna quis volutpat aliquet, est risus commodo nunc, eu egestas neque libero a dui. Nam dolor nunc, condimentum nec sollicitudin ac, lacinia nec nunc. Nam a nunc ac augue lobortis molestie. Ut et elit at tellus imperdiet porta. Vivamus ut velit eget mi lacinia faucibus sit amet non elit. Duis posuere dui eu sem commodo consequat. Praesent condimentum scelerisque sapien, nec fermentum dui eleifend vel. Cras pretium suscipit volutpat. Etiam tempus, libero interdum condimentum condimentum, nunc leo consectetur diam, vel rutrum erat orci vel nisl. Aenean condimentum condimentum tellus, vitae adipiscing metus tristique ac. Nulla facilisi.
+                    <br /><br />
+                    Morbi vel enim nisi, convallis pharetra ligula. Nunc mauris dui, pharetra non tempus ac, tincidunt quis est. Fusce nec metus vitae nulla fringilla convallis. Fusce vitae nulla ligula. Quisque convallis turpis orci, a adipiscing sem. Duis odio elit, vehicula et porttitor at, gravida non ante. Aliquam eu dignissim velit. Curabitur neque leo, pharetra vel rutrum id, convallis a ligula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque magna dui, condimentum non placerat ut, commodo nec nunc. Nullam et elit felis. Nullam vel nulla non turpis iaculis tincidunt dapibus sit amet turpis. Proin id lectus iaculis turpis vestibulum pharetra ut et velit. Pellentesque metus dolor, cursus non commodo at, tempus et libero. Quisque nisi enim, ultrices ultricies cursus in, volutpat sed orci. Quisque vel tempor libero.
+                    <br /><br />
+                    Pellentesque sed orci tortor. Nam tincidunt purus in dui sollicitudin egestas. Curabitur laoreet, nisl id dapibus iaculis, odio neque ornare erat, sit amet tincidunt massa mi scelerisque risus. In iaculis urna et diam imperdiet cursus. Quisque imperdiet eros non nisi gravida euismod lobortis ipsum pellentesque. Aenean suscipit sem sed eros ultricies viverra rutrum ligula ornare. Phasellus ac faucibus justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus non laoreet orci. Fusce vestibulum tincidunt velit, eu tincidunt nunc convallis id. Aliquam erat volutpat. Suspendisse massa diam, egestas ut pellentesque sed, sodales sit amet erat. Proin eget lacus juste. Fusce eu lorem ut velit ultrices ultricies. Cras nec juste elit, sed scelerisque risus.
+                    <br /><br />
+                    Maecenas commodo elit non neque lobortis congue ornare ac libero. Phasellus a imperdiet lorem. Donec posuere hendrerit fringilla. In lacus urna, vehicula ut bibendum eu, dictum in turpis. Maecenas viverra consectetur est nec cursus. Aliquam eu gravida urna. Curabitur a leo ut metus viverra auctor vitae id turpis. Quisque erat quam, egestas sed euismod et, tristique vitae sem. Etiam varius dui at est aliquam pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus eget leo magna, molestie vestibulum nulla. Etiam rutrum accumsan dignissim. Sed dictum convallis orci in lacinia.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="separator">
+
+    <section class="tp-container">
+        <article class="analysis-card">
+            <h2>Analyse de l'Exercice 3 : Sélecteurs CSS complexes</h2>
+            <div class="analysis-content">
+                <p><strong>Connaissances mises en jeu :</strong> Cet exercice démontre la puissance des sélecteurs de structure (<code>:first-child</code>, <code>:nth-child</code>) et des sélecteurs d'attributs (<code>^=</code>, <code>$=</code>, <code>*=</code>). L'objectif est de mettre en forme un tableau de données complexe sans modifier le HTML, en utilisant des plages de calcul pour colorer les différentes catégories (Pseudo-éléments, Attributs, Pseudo-classes).</p>
+                <p><strong>Difficulté :</strong> <span class="badge medium">Moyen</span>. Le ciblage des blocs de lignes via des formules comme <code>:nth-child(n+2):nth-child(-n+5)</code> nécessite une bonne rigueur logique.</p>
+                <p><strong>Intérêt pédagogique :</strong> Indispensable pour la maintenance de projets d'envergure. Cela apprend à styliser des contenus dynamiques dont on ne maîtrise pas toujours l'ajout de classes manuelles.</p>
+                <p><strong>Qualité du résultat :</strong> Le tableau est lisible, respectant les codes de couleurs.</p>
+            </div>
+        </article>
+
+        <div id="tp4-ex3-render" class="exercise-white-box">
+            <table class="css-selectors-table">
+                <caption>Quelques sélecteurs CSS</caption>
+                <tr><th>Syntaxe</th><th>Signification</th><th>Type</th><th>Niveau CSS</th></tr>
+                <tr><td>E::first-line</td><td>La première ligne d'un élément E</td><td>Pseudo-élément</td><td>1</td></tr>
+                <tr><td>E::first-letter</td><td>La première lettre d'un élément E</td><td>Pseudo-élément</td><td>1</td></tr>
+                <tr><td>E::before</td><td>Génère du contenu au début de la boîte de contenu de l'élément E</td><td>Pseudo-élément</td><td>2</td></tr>
+                <tr><td>E::after</td><td>Génère du contenu à la fin de la boîte de contenu de l'élément E</td><td>Pseudo-élément</td><td>2</td></tr>
+                <tr><td>E[toto]</td><td>Un élément E avec l'attribut "toto"</td><td>Sélecteur d'attribut</td><td>2</td></tr>
+                <tr><td>E[toto="val"]</td><td>Un élément E dont la valeur de l'attribut "toto" est exactement égale à "val"</td><td>Sélecteur d'attribut</td><td>2</td></tr>
+                <tr><td>E[toto~="val"]</td><td>Un élément E dont la valeur de l'attribut "toto" est une liste de valeurs séparées d'un espace et dont l'une est exactement égale à "val"</td><td>Sélecteur d'attribut</td><td>2</td></tr>
+                <tr><td>E[toto^="val"]</td><td>Un élément E dont la valeur de l'attribut "toto" commence exactement par la chaîne "val"</td><td>Sélecteur d'attribut</td><td>3</td></tr>
+                <tr><td>E[toto$="val"]</td><td>Un élément E dont la valeur de l'attribut "toto" finit exactement par la chaîne "val"</td><td>Sélecteur d'attribut</td><td>3</td></tr>
+                <tr><td>E[toto*="val"]</td><td>Un élément E dont la valeur de l'attribut "toto" contient la sous-chaîne "val"</td><td>Sélecteur d'attribut</td><td>3</td></tr>
+                <tr><td>E[toto|="val"]</td><td>Un élément E dont la valeur de l'attribut "toto" est une liste de valeurs séparées d'un trait d'union commençant par la chaîne "val"</td><td>Sélecteur d'attribut</td><td>2</td></tr>
+                <tr><td>E:root</td><td>Un élément E, racine du document</td><td>Pseudo-classe de structure</td><td>3</td></tr>
+                <tr><td>E:nth-child(n)</td><td>Un élément E, le n<sup>ième</sup> enfant de son parent</td><td>Pseudo-classe de structure</td><td>3</td></tr>
+                <tr><td>E:nth-last-child(n)</td><td>Un élément E, le n<sup>ième</sup> enfant de son parent en comptant à partir du dernier</td><td>Pseudo-classe de structure</td><td>3</td></tr>
+                <tr><td>E:nth-of-type(n)</td><td>Un élément E, le n<sup>ième</sup> frère de son type</td><td>Pseudo-classe de structure</td><td>3</td></tr>
+                <tr><td>E:nth-last-of-type(n)</td><td>Un élément E, le n<sup>ième</sup> frère de son type en comptant à partir du dernier</td><td>Pseudo-classe de structure</td><td>3</td></tr>
+                <tr><td>E:first-child</td><td>Un élément E, premier enfant de son parent</td><td>Pseudo-classe de structure</td><td>2</td></tr>
+                <tr><td>E:last-child</td><td>Un élément E, dernier enfant de son parent</td><td>Pseudo-classe de structure</td><td>3</td></tr>
+                <tr><td>E:first-of-type</td><td>Un élément E, premier frère de son type</td><td>Pseudo-classe de structure</td><td>3</td></tr>
+                <tr><td>E:last-of-type</td><td>Un élément E, dernier frère de son type</td><td>Pseudo-classe de structure</td><td>3</td></tr>
+                <tr><td>E:only-child</td><td>Un élément E, seul enfant de son parent</td><td>Pseudo-classe de structure</td><td>3</td></tr>
+                <tr><td>E:only-of-type</td><td>Un élément E, seul frère de son type</td><td>Pseudo-classe de structure</td><td>3</td></tr>
+                <tr><td>E:empty</td><td>Un élément E qui n'a aucun enfant, y compris du contenu texte</td><td>Pseudo-classe de struture</td><td>3</td></tr>
+            </table>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

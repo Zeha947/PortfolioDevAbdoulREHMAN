@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio TP1 - Développement Front-End</title>
+    <link rel="stylesheet" href="CSS/TP1.css" />
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="active">Accueil</a>
+            <a href="TP1.html">TP1</a>
+            <a href="TP2.html">TP2</a>
+            <a href="TP3.html">TP3</a>
+            <a href="TP4.html">TP4</a>
+            <a href="TP5.html">TP5</a>
+            <a href="TP6.html">TP6</a>
+            <a href="TP7.html">TP7</a>
+            <a href="TP8.html">TP8</a>
+        </div>
+    </nav>
+
+    
+<main class="portfolio-wrapper">
+    <header class="main-header">
+        <h1>TP1</h1>
+        <p class="subtitle">Fondamentaux du Développement Front-End</p>
+    </header>
+
+    <section class="analysis-card">
+        <h2>Analyse de l'Exercice 1 : Flexbox Cheat-Sheet</h2>
+        <div class="analysis-content">
+            <p><strong>Connaissances mises en jeu :</strong> Cet exercice mobilise une compréhension approfondie du module CSS Flexible Box Layout. Il a fallu distinguer les propriétés applicables au conteneur (flex-direction, justify-content, etc.) de celles applicables aux items (flex-grow, order, align-self). L'utilisation de tableaux HTML pour structurer ces données techniques ajoute une couche de complexité en matière de sémantique et de style.</p>
+            <p><strong>Difficulté :</strong> <span class="difficulty easy">Facile</span>. La structure est logique, mais la gestion de la précision visuelle des bordures en pointillés et l'alignement des éléments de l'en-tête m'a demandé de la reflexion.</p>
+            <p><strong>Intérêt pédagogique :</strong> Créer son propre aide-mémoire est une bonne méthode d'apprentissage. Cela permet de fixer durablement les propriétés fondamentales du développement Front-End.</p>
+            <p><strong>Qualité du résultat :</strong> Le code est propre et bien structuré par classes. L'aspect fonctionnel est purement informatif, mais l'esthétique "tableau de bord" rend la consultation agréable et efficace.</p>
+        </div>
+    </section>
+
+    <div class="exercise-container">
+        <div id="tp1-ex1">
+            <div class="board">
+                <header class="board-header">
+                    <div class="title-group">
+                        <h1>FLEX CONTAINER</h1>
+                        <p>(élément parent)</p>
+                    </div>
+                    <div class="dotted-group">
+                        <div class="dotted">display: flex</div>
+                        <div class="dotted">display: inline-flex</div>
+                    </div>
+                </header>
+                <div class="white-frame">
+                    <table class="main-table">
+                        <thead>
+                            <tr>
+                                <th>flex-direction</th>
+                                <th>flex-wrap</th>
+                                <th>justify-content<br><span>Axe principal (Main)</span></th>
+                                <th>align-items<br><span>Axe secondaire (Cross)</span></th>
+                                <th>align-content</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="txt-red">row</span><br>
+                                    <span class="txt-teal">row-reverse</span><br>
+                                    <span class="txt-teal">column</span><br>
+                                    <span class="txt-teal">column-reverse</span>
+                                </td>
+                                <td>
+                                    <span class="txt-red">no-wrap</span><br>
+                                    <span class="txt-teal">wrap</span><br>
+                                    <span class="txt-teal">wrap-reverse</span>
+                                </td>
+                                <td>
+                                    <span class="txt-red">flex-start</span><br>
+                                    <span class="txt-teal">flex-end</span><br>
+                                    <span class="txt-teal">center</span><br>
+                                    <span class="txt-teal">space-between</span><br>
+                                    <span class="txt-teal">space-around</span><br>
+                                    <span class="txt-teal">space-evenly</span>
+                                </td>
+                                <td>
+                                    <span class="txt-teal">flex-start</span><br>
+                                    <span class="txt-teal">flex-end</span><br>
+                                    <span class="txt-teal">center</span><br>
+                                    <span class="txt-teal">baseline</span><br>
+                                    <span class="txt-red">stretch</span>
+                                </td>
+                                <td>
+                                    <span class="txt-teal">flex-start</span><br>
+                                    <span class="txt-teal">flex-end</span><br>
+                                    <span class="txt-teal">center</span><br>
+                                    <span class="txt-teal">space-between</span><br>
+                                    <span class="txt-teal">space-around</span><br>
+                                    <span class="txt-red">stretch</span>
+                                </td>
+                            </tr>
+                            <tr class="flex-flow-banner">
+                                <td colspan="5">
+                                    FLEX-FLOW
+                                    <div class="txt-teal">flex-direction + flex-wrap</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <section class="items-header">
+                    <div class="title-group">
+                        <h2>FLEX ITEMS</h2>
+                        <p>(élément enfant)</p>
+                    </div>
+                    <div class="dotted-large">
+                        <div class="item-box">ITEM 1</div>
+                        <div class="item-box">ITEM 2</div>
+                        <div class="item-box">ITEM 3</div>
+                    </div>
+                </section>
+                <div class="white-frame">
+                    <table class="bottom-table">
+                        <tbody>
+                            <tr>
+                                <td class="label">order</td>
+                                <td class="value">0</td>
+                                <td class="shorthand" rowspan="5">
+                                    <span class="txt-teal">flex</span> : <span class="txt-red">0 1 auto</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label">flex-grow</td>
+                                <td class="value">0</td>
+                            </tr>
+                            <tr>
+                                <td class="label">flex-shrink</td>
+                                <td class="value">1</td>
+                            </tr>
+                            <tr>
+                                <td class="label">flex-basis</td>
+                                <td class="value">auto</td>
+                            </tr>
+                            <tr>
+                                <td class="label">align-self</td>
+                                <td class="value">auto</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="separator">
+
+    <section class="analysis-card">
+        <h2>Analyse de l'Exercice 2 : Mise en page Structurée</h2>
+        <div class="analysis-content">
+            <p><strong>Connaissances mises en jeu :</strong> Cet exercice se concentre sur la structure HTML5 (header, aside, section, footer) et le positionnement complexe. L'usage de `display: flex` pour créer des colonnes de hauteurs égales, le positionnement absolu pour la navigation et la gestion des images flottantes (`float: left`) sont les points clés ici.</p>
+            <p><strong>Difficulté :</strong> <span class="difficulty medium">Moyen</span>. La difficulté réside dans la superposition des éléments de l'en-tête et la gestion des marges et paddings pour obtenir un rendu "pixel-perfect" fidèle aux maquettes classiques.</p>
+            <p><strong>Intérêt pédagogique :</strong> C'est un exercice typique de découpage de maquette. Maîtriser l'agencement d'une barre latérale (`aside`) par rapport au contenu principal est une compétence de base indispensable pour tout projet web.</p>
+            <p><strong>Qualité du résultat :</strong> Je trouve avoir plutot bien réussis à reproduire la maquette donner de la page.</p>
+        </div>
+    </section>
+
+    <div class="exercise-container">
+        <div id="tp1-ex2">
+            <div id="page">
+                <header>
+                    <p>Header content</p>
+                    <ul>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                    </ul> 
+                </header>
+                <div id="content">
+                    <section>
+                        <h1>Welcome to my awesome website.</h1>
+                        <h2>Indeed, this is an awesome website.</h2> 
+                        <p><strong>Primary content.</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pharetra, arcu in dapibus sagittis, felis leo rhoncus erat, non porttitor urna libero vitae nibh. Ut convallis eros sed magna.</p>
+                        <img src="IMG/photo.jpg" alt="Placeholder" /> 
+                        <p>Aenean enim purus, adipiscing a, vehicula ut, tempor vitae, juste. Nam laoreet mauris vitae elit. Vivamus eros quam, euismod bibendum, pellentesque ut, tristique ut, nisl. <a href="#">Vestibulum ante ipsum primis</a> in faucibus orci lunctus et ultrices posuere cubilia Curae; Suspendisse non metus. Nullam tempor dictum sapien. Duis enim. In ligula. Cras ut enim. Sed dapibus ante in eros. Nulla facilisi. In rhoncus eleifend nunc. Sed risus nulla, pretium in, porta eget, lacinia eu, nunc. In hac habitasse platea dictumst. Vestibulum feugiat lectus et juste. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed aliquet dolor nec ipsum.</p>
+                        <h2>Oooh, more copy&hellip;</h2> 
+                        <p><a href="#">Ut erat nibh</a>, aliquet ut, congue at, tempus in, nunc. Ut aliquet leo et lectus volutpat molestie. Vivamus nunc. Nulla facilisi. Suspendisse dictum nunc tempus elit. Nullam urna quam, bibendum quis, tincidunt a, nonummy euismod, metus. Etiam convallis, dui venenatis feugiat elementum, juste lacus lobortis libero, vel iaculis nibh lectus eu urna. Vivamus arcu. In facilisis quam et lacus. Suspendisse sit amet neque ac enim lobortis ullamcorper. Etiam faucibus sapien ut nunc. Nullam consectetuer vehicula arcu.</p>
+                    </section>
+                    <aside>
+                        <h3>Important Information</h3> 
+                        <p><strong>Secondary content.</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pharetra, arcu in dapibus sagittis, felis leo rhoncus erat, non porttitor urna libero vitae nibh. Ut convallis eros sed magna. Aenean enim purus, adipiscing a, vehicula ut, tempor vitae, juste. Nam laoreet mauris vitae elit. This is interesting information. Ut erat nibh, aliquet ut, congue at, tempus in, nunc. Ut aliquet leo et lectus volutpat molestie. Vivamus nunc. <a href="#">Read&nbsp;more&nbsp;&rarr;</a></p>
+                    </aside>
+                </div>
+                <footer>
+                    <p>Photograph by <a href="#">Jin Bol</a>.</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

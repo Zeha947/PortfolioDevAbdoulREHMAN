@@ -1,0 +1,174 @@
+:root {
+    --bg-dark: #0a0a0a;
+    --card-bg: #161616;
+    --accent: #bb86fc;
+    --accent-glow: rgba(187, 134, 252, 0.3);
+    --text-primary: #ffffff;
+    --text-muted: #a0a0a0;
+    --nav-bg: rgba(0, 0, 0, 0.85);
+}
+
+/* --- GLOBAL --- */
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    background-image: radial-gradient(circle at 50% -20%, #201035 0%, transparent 50%); /* Subtle purple glow top */
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* --- NAVIGATION OPTIMISÉE --- */
+nav {
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(10px); /* Effet verre dépoli */
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-container { display: flex; gap: 8px; }
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0 20px;
+    height: 75px;
+    line-height: 75px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+    position: relative;
+}
+
+nav a:hover { color: var(--accent); }
+
+nav a.active { color: var(--accent); }
+nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 20%; width: 60%; height: 3px;
+    background-color: var(--accent);
+    box-shadow: 0 -2px 12px var(--accent);
+}
+
+/* --- HERO SECTION IMPACTANTE --- */
+.hero {
+    text-align: center;
+    padding: 140px 20px 80px;
+}
+
+.badge-mmi {
+    background: rgba(187, 134, 252, 0.15);
+    color: var(--accent);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 1px solid var(--accent);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 25px 0;
+    letter-spacing: -1px;
+}
+
+.text-gradient {
+    background: linear-gradient(45deg, var(--accent), #e0c3fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+}
+
+.hero-line {
+    width: 60px;
+    height: 4px;
+    background: var(--accent);
+    margin: 40px auto 0;
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--accent);
+}
+
+/* --- GRILLE DE COMPÉTENCES --- */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px 100px; }
+
+h2.section-title {
+    margin: 80px 0 50px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.4s ease;
+}
+
+.skill-card .icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-glow);
+}
+
+.skill-card h3 { color: var(--accent); margin-bottom: 15px; }
+.skill-card p { font-size: 0.95rem; color: var(--text-muted); }
+
+/* --- PERSPECTIVES --- */
+.critique-section {
+    background: linear-gradient(145deg, #1a1a1a, #121212);
+    padding: 50px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.perspective-list {
+    margin-top: 40px;
+    display: grid;
+    gap: 25px;
+    list-style: none;
+}
+
+.perspective-list li {
+    padding-left: 20px;
+    border-left: 3px solid var(--accent);
+}
+
+.perspective-list li strong { display: block; font-size: 1.1rem; color: var(--accent); }
+.perspective-list li span { color: var(--text-muted); font-size: 0.95rem; }
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 60px;
+    border-top: 1px solid #1a1a1a;
+    color: #444;
+}

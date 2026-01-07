@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio TP8 - BUT MMI</title>
+    <link rel="stylesheet" href="CSS/TP8.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="active">Accueil</a>
+            <a href="TP1.html">TP1</a>
+            <a href="TP2.html">TP2</a>
+            <a href="TP3.html">TP3</a>
+            <a href="TP4.html">TP4</a>
+            <a href="TP5.html">TP5</a>
+            <a href="TP6.html">TP6</a>
+            <a href="TP7.html">TP7</a>
+            <a href="TP8.html">TP8</a>
+        </div>
+    </nav>
+<main class="portfolio-wrapper">
+    <header class="main-header">
+        <h1>TP8</h1>
+        <p class="subtitle">Animation & Sprites Dynamiques</p>
+    </header>
+
+    <section class="tp-section">
+        <article class="analysis-card">
+            <h2>Analyse de l'Exercice 2 : Mario Run (CSS)</h2>
+            <div class="analysis-content">
+                <p><strong>Connaissances mises en jeu :</strong> Cet exercice exploite les <code>@keyframes</code> pour gérer deux animations parallèles : le défilement infini du décor et la course du personnage. L'utilisation de <code>steps(5)</code> est ici fondamentale pour découper visuellement la planche de sprites de Mario et créer un mouvement fluide.</p>
+                <p><strong>Difficulté :</strong> <span class="badge medium">Moyen</span>. La précision du timing entre le défilement du fond et l'animation des jambes est essentielle pour éviter un effet de glissade.</p>
+                <p><strong>Intérêt pédagogique :</strong> Excellent pour comprendre les bases du "parallax scrolling" et de l'animation cyclique en pur CSS.</p>
+                <p><strong>Qualité du résultat :</strong> Le rendu est dynamique et fidèle aux mécaniques des jeux de plateforme classiques.</p>
+            </div>
+        </article>
+
+        <div class="exercise-white-box">
+            <div id="game-canvas">
+                <div id="mario"></div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="separator">
+
+    <section class="tp-section">
+        <article class="analysis-card">
+            <h2>Analyse de l'Exercice 3 : Animation de Sprite via JavaScript</h2>
+            <div class="analysis-content">
+                <p><strong>Connaissances mises en jeu :</strong> Contrairement au CSS pur, cet exercice délègue le contrôle de l'animation à JavaScript en utilisant un objet de données externe <code>infoSprite.js</code>. Le script doit parcourir les 13 frames définies (de 0 à 12) pour mettre à jour en temps réel la position du fond et les dimensions de l'élément créé au clic.</p>
+                <p><strong>Difficulté :</strong> <span class="badge difficile">Difficile</span>. L'obligation d'utiliser les données de l'objet impose une rigueur dans la gestion des boucles d'animation et du nettoyage du DOM (<code>remove</code>) après l'effet.</p>
+                <p><strong>Intérêt pédagogique :</strong> Utile pour apprendre à manipuler des structures de données complexes (JSON/Objets) afin de piloter des éléments graphiques.</p>
+                <p><strong>Qualité du résultat :</strong> Malheureusement je n'ai pas réussis à faire marcher l'exercice dans le site de la page web du TP8</p>
+            </div>
+        </article>
+
+        <div class="exercise-white-box">
+            <div id="canvas-area">
+                <p class="instruction">Dont work</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="JS/infoSprite.js"></script>
+<script src="JS/tp8.js"></script>
+</body>
+</html>

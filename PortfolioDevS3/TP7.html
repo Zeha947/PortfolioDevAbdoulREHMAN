@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio TP7 - BUT MMI</title>
+    <link rel="stylesheet" href="CSS/TP7.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="active">Accueil</a>
+            <a href="TP1.html">TP1</a>
+            <a href="TP2.html">TP2</a>
+            <a href="TP3.html">TP3</a>
+            <a href="TP4.html">TP4</a>
+            <a href="TP5.html">TP5</a>
+            <a href="TP6.html">TP6</a>
+            <a href="TP7.html">TP7</a>
+            <a href="TP8.html">TP8</a>
+        </div>
+    </nav>
+<main class="portfolio-wrapper">
+    <header class="main-header">
+        <h1>TP7</h1>
+        <p class="subtitle">Graphisme Vectoriel & Canvas</p>
+    </header>
+
+    <section class="tp-section">
+        <article class="analysis-card">
+            <h2>Analyse de l'Exercice 2 : Pac-Man en SVG</h2>
+            <div class="analysis-content">
+                <p><strong>Connaissances mises en jeu :</strong> Cet exercice mobilise la maîtrise du langage <em>Scalable Vector Graphics</em> (SVG). Il a fallu utiliser des balises de formes simples (<code>rect</code>, <code>circle</code>) et un tracé complexe (<code>path</code>) utilisant les commandes de mouvement (M), de ligne (L) et d'arc elliptique (A) pour dessiner la bouche du personnage.</p>
+                <p><strong>Difficulté :</strong> <span class="badge easy">Facile</span>. La principale difficulté réside dans le calcul des coordonnées de l'arc de cercle pour obtenir une ouverture précise.</p>
+                <p><strong>Intérêt pédagogique :</strong> Très élevé pour comprendre le fonctionnement des images vectorielles intégrées au DOM, permettant une mise à l'échelle sans perte de qualité.</p>
+                <p><strong>Qualité du résultat :</strong> Le code est propre et respecte les proportions du modèle original. L'utilisation du <code>viewBox</code> assure une bonne gestion de l'espace de dessin.</p>
+            </div>
+        </article>
+
+        <div class="exercise-white-box" id="render-ex2">
+            <svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="400" fill="black"/>
+                <path d="M 150 200 L 221 129 A 100 100 0 1 0 221 271 Z" fill="#FFD700" />
+                <circle cx="165" cy="145" r="13" fill="black" />
+                <circle cx="161" cy="141" r="4.5" fill="white" />
+                <circle cx="290" cy="200" r="13" fill="white" />
+                <circle cx="360" cy="200" r="13" fill="white" />
+            </svg>
+        </div>
+    </section>
+
+    <hr class="separator">
+
+    <section class="tp-section">
+        <article class="analysis-card">
+            <h2>Analyse de l'Exercice 4 : Fleur Générative en Canvas</h2>
+            <div class="analysis-content">
+                <p><strong>Connaissances mises en jeu :</strong> Cet exercice utilise l'API <em>Canvas 2D</em> de HTML5. Il met en œuvre des courbes de Bézier complexes (<code>bezierCurveTo</code>) pour dessiner les pétales, ainsi que des transformations de contexte (<code>translate</code>, <code>rotate</code>, <code>save/restore</code>) pour générer la fleur complète. Une boucle d'animation basée sur <code>requestAnimationFrame</code> assure la rotation fluide du troisième canvas.</p>
+                <p><strong>Difficulté :</strong> <span class="badge medium">Moyen - difficile</span>. La gestion des repères de coordonnées lors des rotations successives demande une bonne connaissance dans le codage, je me suis aidé des forums pour l'exercice.</p>
+                <p><strong>Intérêt pédagogique :</strong> Apprendre à dessiner et animer par le script permet de créer des interfaces graphiques dynamiques et performantes.</p>
+                <p><strong>Qualité du résultat :</strong> La structure du code est modulaire grâce aux fonctions <code>dessinerPetale</code> et <code>dessinerFleur</code>, ce qui facilite la maintenance et les modifications esthétiques.</p>
+            </div>
+        </article>
+
+        <div class="exercise-white-box" id="render-ex4">
+            <div class="canvas-container">
+                <div class="boite">
+                    <h3>1. Pétale</h3>
+                    <canvas id="canvas1" width="300" height="300"></canvas>
+                </div>
+                <div class="boite">
+                    <h3>2. Fleur Complète</h3>
+                    <canvas id="canvas2" width="300" height="300"></canvas>
+                </div>
+                <div class="boite">
+                    <h3>3. Animation</h3>
+                    <canvas id="canvas3" width="300" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="JS/script.js"></script>
+</body>
+</html>

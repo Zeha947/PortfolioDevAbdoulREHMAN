@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio TP2 - Maîtrise de CSS Grid et Flexbox</title>
+    <link rel="stylesheet" href="CSS/TP2.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="active">Accueil</a>
+            <a href="TP1.html">TP1</a>
+            <a href="TP2.html">TP2</a>
+            <a href="TP3.html">TP3</a>
+            <a href="TP4.html">TP4</a>
+            <a href="TP5.html">TP5</a>
+            <a href="TP6.html">TP6</a>
+            <a href="TP7.html">TP7</a>
+            <a href="TP8.html">TP8</a>
+        </div>
+    </nav>
+<main class="portfolio-wrapper">
+    
+    <header class="main-header">
+        <h1>TP2</h1>
+        <p class="subtitle">Layouts Complexes</p>
+    </header>
+
+    <section class="analysis-card">
+        <h2>Analyse de l'Exercice 2.1 : Grid par numéros de lignes</h2>
+        <div class="analysis-content">
+            <p><strong>Connaissances mises en jeu :</strong> Cet exercice utilise le module CSS Grid Layout en se basant sur la numérotation des lignes (`grid-column: 1 / 4`). Il a fallu définir précisément la grille parente avec `grid-template-columns` et `grid-template-rows` pour placer chaque item.</p>
+            <p><strong>Difficulté :</strong> <span class="difficulty easy">Facile</span>. Le concept de lignes est intuitif une fois le schéma de la grille dessiné.</p>
+            <p><strong>Intérêt pédagogique :</strong> C'est utile car comprendre comment un élément s'étend sur plusieurs colonnes ou lignes est fondamental pour sortir des layouts simples.</p>
+            <p><strong>Qualité du résultat :</strong> Le code est explicite et le résultat visuel est parfaitement conforme à la structure demandée.</p>
+        </div>
+    </section>
+
+    <div id="tp2-ex2-1" class="exercise-container">
+        <div id="container">
+            <div id="item1">Item 1 <br /> height : 50px</div>
+            <div id="item2">Item 2 <br /> width : 25%</div>
+            <div id="item5">Item 5 <br /> height : 50px</div>
+            <div id="item6">Item 6 <br /> width : 50%</div>
+            <div id="item7">Item 7 <br /> width : 25%</div>
+            <div id="item8">Item 8 <br /> height : 100px</div>
+            <div id="item3">Item 3 <br /> height : 50px</div>
+            <div id="item4">Item 4 <br /> height : 50px</div>
+        </div>
+    </div>
+
+    <section class="analysis-card">
+        <h2>Analyse de l'Exercice 2.2 : Grid Template Areas</h2>
+        <div class="analysis-content">
+            <p><strong>Connaissances mises en jeu :</strong> Utilisation de la propriété `grid-template-areas`. Cette méthode permet de "dessiner" littéralement la structure de la page en nommant des zones.</p>
+            <p><strong>Difficulté :</strong> <span class="difficulty easy">Facile</span>. Rien de spécial à dire</p>
+            <p><strong>Intérêt pédagogique :</strong> Intéressant pour la maintenance du code.</p>
+            <p><strong>Qualité du résultat :</strong> Le code est bon et très lisible.</p>
+        </div>
+    </section>
+
+    <div id="tp2-ex2-2" class="exercise-container">
+        <div id="container">
+            <div id="item1">Item 1 <br /> height : 50px</div>
+            <div id="item2">Item 2 <br /> width : 25%</div>
+            <div id="item3">Item 3 <br /> height : 50px</div>
+            <div id="item4">Item 4 <br /> height : 50px</div>
+            <div id="item5">Item 5 <br /> height : 50px</div>
+            <div id="item6">Item 6 <br /> width : 50%</div>
+            <div id="item7">Item 7 <br /> width : 25%</div>
+            <div id="item8">Item 8 <br /> height : 100px</div>
+        </div>
+    </div>
+
+    <section class="analysis-card">
+        <h2>Analyse de l'Exercice 2.3 : Imbrication Flexbox</h2>
+        <div class="analysis-content">
+            <p><strong>Connaissances mises en jeu :</strong> Reproduction d'un layout complexe uniquement avec `display: flex`. Cela demande une imbrication de conteneurs (`#middle`, `#center`, `#right`) pour gérer les directions horizontales et verticales.</p>
+            <p><strong>Difficulté :</strong> <span class="difficulty medium">Moyen</span>. La logique de conteneurs parents/enfants est plus complexe à gérer ici qu'avec Grid pour un résultat identique.</p>
+            <p><strong>Intérêt pédagogique :</strong> L'exercice m'a montré que Flexbox est parfait pour des alignements unidimensionnels, Grid est bien plus adapté aux structures bidimensionnelles.</p>
+            <p><strong>Qualité du résultat :</strong> Malgré la complexité de l'arborescence HTML, le rendu est fluide et respecte les dimensions imposées.</p>
+        </div>
+    </section>
+
+    <div id="tp2-ex2-3" class="exercise-container">
+        <div id="container">
+            <div id="item1">Item 1 <br /> height : 50px</div>
+            <div id="content">
+                <div id="item2">Item 2 <br /> width : 25%</div>
+                <div id="middle">
+                    <div id="item5">Item 5 <br /> height : 50px</div>
+                    <div id="center">
+                        <div id="item6">Item 6 <br /> width : 50%</div>
+                        <div id="right">
+                            <div id="item7">Item 7 <br /> width : 25%</div>
+                            <div id="item8">Item 8 <br /> height : 100px</div>
+                        </div>
+                    </div>
+                    <div id="item3">Item 3 <br /> height : 50px</div>
+                </div>
+            </div>
+            <div id="item4">Item 4 <br /> height : 50px</div>
+        </div>
+    </div>
+
+    <section class="analysis-card">
+        <h2>Analyse de l'Exercice 3 : Layout complexe en 5x5</h2>
+        <div class="analysis-content">
+            <p><strong>Connaissances mises en jeu :</strong> Création d'une grille 5x5 avec des unités en pourcentage (`20%`). Placement d'éléments avec des enjambements complexes sur les lignes et colonnes.</p>
+            <p><strong>Difficulté :</strong> <span class="difficulty medium">Moyen</span>. Il fallait que je fasse attention sur les indices de début et de fin (`grid-column: 1 / 5` par exemple) pour éviter les chevauchements non désirés.</p>
+            <p><strong>Intérêt pédagogique :</strong> Comprendre le grid et son utilisation</p>
+            <p><strong>Qualité du résultat :</strong> Le rendu est propre et les couleurs permettent de bien identifier chaque zone de la structure.</p>
+        </div>
+    </section>
+
+    <div id="tp2-ex3" class="exercise-container">
+        <div id="container">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+            <div class="item item6">6</div>
+            <div class="item item7">7</div>
+            <div class="item item8">8</div>
+            <div class="item item9">9</div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
